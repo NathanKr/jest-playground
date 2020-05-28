@@ -25,10 +25,15 @@ test("Adding 1 + 2 + 3  equals 6", () => {
 });
 
 
-// --- using mocks
+// --- test with mocks
 test("sum2 is called once", () => {
   math.sum2 = jest.fn((a, b) => {});
   math.sum2(1, 2);
   expect(math.sum2).toHaveBeenCalled();
 });
+
+test("test asynchronous code" , async () =>{
+  const result = await math.sum2Delayed(2,3);
+  expect(result).toBe(5);
+})
 
