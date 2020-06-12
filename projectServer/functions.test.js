@@ -7,21 +7,7 @@ test("change constant a to 3 is success", () => {
   expect(constants.a).toBe(3);
 });
 
-test("Adding 1 + 1 equals 2", () => {
-  expect(math.sum(1, 1)).toBe(2);
-});
 
-test("Adding 1 + 1 not equals 3", () => {
-  expect(math.sum(1, 1)).not.toBe(3);
-});
-
-test("is null", () => {
-  expect(math.isNull()).toBeNull();
-});
-
-test("Adding 1 + 1 not equals 3", () => {
-  expect(math.sum2(1, 1)).not.toBe(3);
-});
 
 test("Adding 1 + 2 + 3 not equals 7", () => {
   expect(math.sum3(1, 2, 3)).not.toBe(7);
