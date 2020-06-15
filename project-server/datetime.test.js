@@ -9,7 +9,7 @@ afterAll(() =>{
 
   //14.02.2017
   test("time now freezed year is 2017", () => {
-    const dateObject = new Date(Date.now());
+    const dateObject = new Date(Date.now()) ;
     expect(dateObject.getFullYear()).toBe(2017);
   });
 
