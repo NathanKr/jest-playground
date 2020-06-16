@@ -17,6 +17,11 @@ test("Adding 1 + 2 + 3  equals 6", () => {
   expect(math.sum3(1, 2, 3)).toBe(6);
 });
 
+test("Adding 1 + 2 + 3  equals 6 using snapshot", () => {
+  expect(math.sum3(1, 2, 3)).toMatchSnapshot();
+});
+
+
 // --- test with mocks
 test("sum2 is called once", () => {
   math.sum2 = jest.fn((a, b) => {});
