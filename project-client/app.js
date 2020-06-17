@@ -1,3 +1,3 @@
-// export function sum(num1, num2) {
-//   return num1 + num2;
-// }
+// import {sum} from './utils'
+
+console.log(sum(11,22))

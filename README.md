@@ -1,2 +1,2 @@
 <p>testing with jest on the server is working</p>
-<p>testing with jest on the client is not working here because import\export is used which requires a server (CORS problem) and i do not see how it fit with jest(check here https://github.com/NathanKr/javascript-modules-playground)</p>
+<p>testing with jest on the client is not working here because import\export is used which requires a server (CORS problem) and i do not see how it fit with jest(check here https://github.com/NathanKr/javascript-modules-playground). other option is use webpack but the configuration is not yet clear</p>
