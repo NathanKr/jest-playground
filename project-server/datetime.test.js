@@ -20,8 +20,10 @@ describe("datetime freeze", () => {
     expect(date.getTime()).toBe(1487076708000);
   });
 
-  test("time now is 1487076708000", () => {
-    expect(Date.now()).toBe(1487076708000);
+  //14.02.2017
+  test("time now freezed year is 2017", () => {
+    const dateObject = new Date(Date.now()) ;
+    expect(dateObject.getFullYear()).toBe(2017);
   });
 
 });
