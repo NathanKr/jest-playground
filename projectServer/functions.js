@@ -14,5 +14,4 @@ function sum2Delayed(num1, num2) {
   });
 }
 
-module.exports = { sum2, sum3 , sum2Delayed };
-
+module.exports = { sum2, sum3, sum2Delayed };
