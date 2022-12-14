@@ -8,3 +8,10 @@ test("test axios is called", async () => {
 
   expect(result).toBe("default");
 });
+
+test("test axios is called once", async () => {
+  await jsonplaceholder.getPosts();
+  const numCalls = axios.get.mock.calls.length;
+  
+  expect(numCalls).toBe(1);
+});
