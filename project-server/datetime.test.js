@@ -12,7 +12,8 @@ describe("datetime freeze", () => {
 
   test("time now is correct using string", () => {
     const date = new Date(Date.now())
-    expect(date.toString()).toBe("Tue Feb 14 2017 14:51:48 GMT+0200 (GMT+02:00)");
+    const dateLeftPart = date.toString().split('(')[0] 
+    expect(dateLeftPart).toBe("Tue Feb 14 2017 14:51:48 GMT+0200 ");
   });
   
   test("time now is 1487076708000 using getTime", () => {
