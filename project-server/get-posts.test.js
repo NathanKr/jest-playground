@@ -3,19 +3,26 @@ const axios = require("axios");
 jest.mock("axios");
 
 beforeEach(() => {
-  jest.clearAllMocks(); // must be used here
+  // jest.clearAllMocks(); this is not enough
+  jest.resetAllMocks();
 });
 
-test("test axios is called", async () => {
-  axios.get.mockResolvedValue("default");
+test("axios.get return correct mocked value", async () => {
+  axios.get.mockResolvedValue("xyz");
   const result = await jsonplaceholder.getPosts();
 
-  expect(result).toBe("default");
+  expect(result).toBe("xyz");
 });
 
 test("test axios is called once", async () => {
   await jsonplaceholder.getPosts();
   const numCalls = axios.get.mock.calls.length;
-  
+
   expect(numCalls).toBe(1);
+});
+
+test("mock module ---> return by default undefined per function", async () => {
+  const result = await jsonplaceholder.getPosts();
+
+  expect(result).toBeFalsy();
 });

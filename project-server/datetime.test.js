@@ -10,7 +10,7 @@ describe("datetime freeze", () => {
   
 
 
-  test("time now is correct using string", () => {
+  test("time now is correct using cls", () => {
     const date = new Date(Date.now())
     const dateLeftPart = date.toString().split('(')[0] 
     expect(dateLeftPart).toBe("Tue Feb 14 2017 14:51:48 GMT+0200 ");
